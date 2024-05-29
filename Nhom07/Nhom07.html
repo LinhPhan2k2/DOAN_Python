@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6d1f1663ab3a419b77d88d08f31c0733 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+ <div class="form-group">
+        <div style="float:left; margin-left:50px"> <label style="font-size:20px; font: Times New Romand">Nhập địa điểm</label> </div>
+        <div style="float:left; margin-left:50px"> <input type="text" id="Place" class="form-control" id="place" name="place" width="1000px" style="font-size:20px; font: Times New Romand"> </div>
+        <div style="float:left; margin-left:50px"> <input type="button" id="buttonfind" onclick="ClickButton()" style="font-size:20px; margin-bottom:30px; font:Times New Roman" value="Tìm kiếm"> </button> </div>
+        <div style="float:left; margin-left: 50px; margin-bottom: 50px;"> <p id="KetQua"> </p> </div>
+        
+    </div>
+    <script>
+    function ClickButton()
+    {
+        KetQua.innerText = 'Đường đi là: ' + place.value;
+    }
+    let place = document.getElementById('Place');
+    let ketqua = document.getElementById('KetQua');
+    let checkButton = document.getElementById('buttonfind');
+    checkButton.addEventListener('click', ClickButton);
+    </script>
+
+    
+            <div class="folium-map" id="map_6d1f1663ab3a419b77d88d08f31c0733" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6d1f1663ab3a419b77d88d08f31c0733 = L.map(
+                "map_6d1f1663ab3a419b77d88d08f31c0733",
+                {
+                    center: [10.77897, 106.698929],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_772c5b46ea57c58923f13dc76bc19c33 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+            var marker_bdb45aabe43f4626651234281be51cf2 = L.marker(
+                [10.77897, 106.698929],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_796a9f4445437cfa76268b88cf6f733b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_785232f00973e90ee9e2db7a22104603 = $(`<div id="html_785232f00973e90ee9e2db7a22104603" style="width: 100.0%; height: 100.0%;">Nhà thờ Đức Bà</div>`)[0];
+                popup_796a9f4445437cfa76268b88cf6f733b.setContent(html_785232f00973e90ee9e2db7a22104603);
+            
+        
+
+        marker_bdb45aabe43f4626651234281be51cf2.bindPopup(popup_796a9f4445437cfa76268b88cf6f733b)
+        ;
+
+        
+    
+    
+            var marker_8f731bda6be3a2285b4786445f3e3724 = L.marker(
+                [10.77703, 106.70331],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_2fcc305160f7c66ff5c1dbe841dc5d6c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7a996bdf788915ad1bbba292df10294 = $(`<div id="html_e7a996bdf788915ad1bbba292df10294" style="width: 100.0%; height: 100.0%;">Nhà hát Thành Phố</div>`)[0];
+                popup_2fcc305160f7c66ff5c1dbe841dc5d6c.setContent(html_e7a996bdf788915ad1bbba292df10294);
+            
+        
+
+        marker_8f731bda6be3a2285b4786445f3e3724.bindPopup(popup_2fcc305160f7c66ff5c1dbe841dc5d6c)
+        ;
+
+        
+    
+    
+            var marker_c9b632eabba54c23571669be4a5ed06f = L.marker(
+                [10.77713, 106.69544],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_ae174afd8fac44a419fd83f1caeeb1d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c851497b42eb9b0e67a9ae1646a4cec0 = $(`<div id="html_c851497b42eb9b0e67a9ae1646a4cec0" style="width: 100.0%; height: 100.0%;">Dinh Độc Lập</div>`)[0];
+                popup_ae174afd8fac44a419fd83f1caeeb1d3.setContent(html_c851497b42eb9b0e67a9ae1646a4cec0);
+            
+        
+
+        marker_c9b632eabba54c23571669be4a5ed06f.bindPopup(popup_ae174afd8fac44a419fd83f1caeeb1d3)
+        ;
+
+        
+    
+    
+            var marker_eefaabd62d195eb9318edc338b7d60ee = L.marker(
+                [10.77411, 106.70062],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_40a3ead1e676770ccd9aed6b375cf5fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9915f5e33caff18013be2112db5fad8f = $(`<div id="html_9915f5e33caff18013be2112db5fad8f" style="width: 100.0%; height: 100.0%;">Chợ Bến Thành</div>`)[0];
+                popup_40a3ead1e676770ccd9aed6b375cf5fe.setContent(html_9915f5e33caff18013be2112db5fad8f);
+            
+        
+
+        marker_eefaabd62d195eb9318edc338b7d60ee.bindPopup(popup_40a3ead1e676770ccd9aed6b375cf5fe)
+        ;
+
+        
+    
+    
+            var marker_e659d3af7d55a12d6090455030739916 = L.marker(
+                [10.779731922055774, 106.69209159639547],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_8fa54ec88f72f7822b9be58f24bbebcb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d35ddc86ee558c9649cce65d8ad37906 = $(`<div id="html_d35ddc86ee558c9649cce65d8ad37906" style="width: 100.0%; height: 100.0%;">Bảo tàng chứng tích chiến tranh</div>`)[0];
+                popup_8fa54ec88f72f7822b9be58f24bbebcb.setContent(html_d35ddc86ee558c9649cce65d8ad37906);
+            
+        
+
+        marker_e659d3af7d55a12d6090455030739916.bindPopup(popup_8fa54ec88f72f7822b9be58f24bbebcb)
+        ;
+
+        
+    
+    
+            var marker_6ffe86ebf4168d14d84d767233ea04e8 = L.marker(
+                [10.78825801187255, 106.70474832523111],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_5dfb4c67bf0a20d446f676a04bf66ac6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de44adfee38417ef72802d1a8c62cb69 = $(`<div id="html_de44adfee38417ef72802d1a8c62cb69" style="width: 100.0%; height: 100.0%;">Bảo tàng lịch sử Việt Nam</div>`)[0];
+                popup_5dfb4c67bf0a20d446f676a04bf66ac6.setContent(html_de44adfee38417ef72802d1a8c62cb69);
+            
+        
+
+        marker_6ffe86ebf4168d14d84d767233ea04e8.bindPopup(popup_5dfb4c67bf0a20d446f676a04bf66ac6)
+        ;
+
+        
+    
+    
+            var marker_c285578a1e27afa942ed11ba73ae1d9f = L.marker(
+                [10.773940323533742, 106.70685775221801],
+                {"zoomStart": 15}
+            ).addTo(map_6d1f1663ab3a419b77d88d08f31c0733);
+        
+    
+        var popup_4d5a837184c63e8156c0c1ea666a268f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbc881c9a88be60a0b029b9ad94132ed = $(`<div id="html_fbc881c9a88be60a0b029b9ad94132ed" style="width: 100.0%; height: 100.0%;">Bến Bạch Đằng</div>`)[0];
+                popup_4d5a837184c63e8156c0c1ea666a268f.setContent(html_fbc881c9a88be60a0b029b9ad94132ed);
+            
+        
+
+        marker_c285578a1e27afa942ed11ba73ae1d9f.bindPopup(popup_4d5a837184c63e8156c0c1ea666a268f)
+        ;
+
+        
+    
+</script>
+</html>
